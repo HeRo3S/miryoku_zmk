@@ -35,6 +35,9 @@
 #ifndef U_POSITIONAL_MODTAP_FLAVOR
   #define U_POSITIONAL_MODTAP_FLAVOR "balanced"
 #endif
+#ifndef U_LAYERTAP_FLAVOR
+  #define U_LAYERTAP_FLAVOR "balanced"
+#endif
 #ifndef U_MODTAP_REQUIRE_PRIOR_IDLE
   #define U_MODTAP_REQUIRE_PRIOR_IDLE 125
 #endif

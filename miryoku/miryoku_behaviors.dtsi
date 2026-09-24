@@ -18,12 +18,34 @@
       #binding-cells = <2>;
       tapping-term-ms = <U_TAPPING_TERM>;
       quick-tap-ms = <U_QUICKTAP_TERM>;
+      require-prior-idle-ms = <U_MODTAP_REQUIRE_PRIOR_IDLE>;
       flavor = U_POSITIONAL_MODTAP_FLAVOR;
       bindings = <&kp>, <&kp>;
       hold-trigger-key-positions = <MIRYOKU_HOLD_TRIGGER_RIGHT>;
       hold-trigger-on-release;
     };
     u_mtr: u_mtr {
+      compatible = "zmk,behavior-hold-tap";
+      #binding-cells = <2>;
+      tapping-term-ms = <U_TAPPING_TERM>;
+      quick-tap-ms = <U_QUICKTAP_TERM>;
+      require-prior-idle-ms = <U_MODTAP_REQUIRE_PRIOR_IDLE>;
+      flavor = U_POSITIONAL_MODTAP_FLAVOR;
+      bindings = <&kp>, <&kp>;
+      hold-trigger-key-positions = <MIRYOKU_HOLD_TRIGGER_LEFT>;
+      hold-trigger-on-release;
+    };
+    u_mtls: u_mtls {
+      compatible = "zmk,behavior-hold-tap";
+      #binding-cells = <2>;
+      tapping-term-ms = <U_TAPPING_TERM>;
+      quick-tap-ms = <U_QUICKTAP_TERM>;
+      flavor = U_POSITIONAL_MODTAP_FLAVOR;
+      bindings = <&kp>, <&kp>;
+      hold-trigger-key-positions = <MIRYOKU_HOLD_TRIGGER_RIGHT>;
+      hold-trigger-on-release;
+    };
+    u_mtrs: u_mtrs {
       compatible = "zmk,behavior-hold-tap";
       #binding-cells = <2>;
       tapping-term-ms = <U_TAPPING_TERM>;
@@ -39,7 +61,7 @@
       #binding-cells = <2>;
       tapping-term-ms = <U_TAPPING_TERM>;
       quick-tap-ms = <U_QUICKTAP_TERM>;
-      flavor = U_MODTAP_FLAVOR;
+      flavor = U_LAYERTAP_FLAVOR;
       bindings = <&mo>, <&kp>;
     };
   };
