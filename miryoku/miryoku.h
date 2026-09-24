@@ -23,9 +23,21 @@
 #define U_NA &none // present but not available for use
 #define U_NU &none // available but not used
 
-#define U_TAPPING_TERM 200
-#define U_QUICKTAP_TERM 150
-#define U_MODTAP_FLAVOR "balanced"
+#ifndef U_TAPPING_TERM
+  #define U_TAPPING_TERM 200
+#endif
+#ifndef U_QUICKTAP_TERM
+  #define U_QUICKTAP_TERM 150
+#endif
+#ifndef U_MODTAP_FLAVOR
+  #define U_MODTAP_FLAVOR "tap-preferred"
+#endif
+#ifndef U_POSITIONAL_MODTAP_FLAVOR
+  #define U_POSITIONAL_MODTAP_FLAVOR "balanced"
+#endif
+#ifndef U_MODTAP_REQUIRE_PRIOR_IDLE
+  #define U_MODTAP_REQUIRE_PRIOR_IDLE 125
+#endif
 
 #include "miryoku_clipboard.h"
 

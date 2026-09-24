@@ -8,9 +8,32 @@
       #binding-cells = <2>;
       tapping-term-ms = <U_TAPPING_TERM>;
       quick-tap-ms = <U_QUICKTAP_TERM>;
+      require-prior-idle-ms = <U_MODTAP_REQUIRE_PRIOR_IDLE>;
       flavor = U_MODTAP_FLAVOR;
       bindings = <&kp>, <&kp>;
     };
+#if defined (MIRYOKU_HOLD_TRIGGER_LEFT) && defined (MIRYOKU_HOLD_TRIGGER_RIGHT)
+    u_mtl: u_mtl {
+      compatible = "zmk,behavior-hold-tap";
+      #binding-cells = <2>;
+      tapping-term-ms = <U_TAPPING_TERM>;
+      quick-tap-ms = <U_QUICKTAP_TERM>;
+      flavor = U_POSITIONAL_MODTAP_FLAVOR;
+      bindings = <&kp>, <&kp>;
+      hold-trigger-key-positions = <MIRYOKU_HOLD_TRIGGER_RIGHT>;
+      hold-trigger-on-release;
+    };
+    u_mtr: u_mtr {
+      compatible = "zmk,behavior-hold-tap";
+      #binding-cells = <2>;
+      tapping-term-ms = <U_TAPPING_TERM>;
+      quick-tap-ms = <U_QUICKTAP_TERM>;
+      flavor = U_POSITIONAL_MODTAP_FLAVOR;
+      bindings = <&kp>, <&kp>;
+      hold-trigger-key-positions = <MIRYOKU_HOLD_TRIGGER_LEFT>;
+      hold-trigger-on-release;
+    };
+#endif
     u_lt: u_lt {
       compatible = "zmk,behavior-hold-tap";
       #binding-cells = <2>;
